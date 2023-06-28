@@ -24,9 +24,10 @@ int main() {
         int number;
         int pose;
         cin>>number;
-            auto it = std::lower_bound(vec.begin(), vec.end(), number);
+            auto it = std::lower_bound(vec.begin(), vec.end(), number); // this function find the position of the integer within the vector and resturns the iterator to the position
+        //if it dosent exist then it gives the iterator to the next higher number
     pose=distance(vec.begin(), it)+1;
-    if (it != vec.end()&& *it == number) {
+    if (it != vec.end()&& *it == number) { // here *it ==number is used to check if the iterator points to the number or it just dosent exist in the vector and the iterator points to the next higher number
 
         cout<<"Yes "<<pose<<endl;
     } else {
